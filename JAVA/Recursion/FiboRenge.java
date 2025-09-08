@@ -1,24 +1,36 @@
 
 import java.util.Scanner;
+// static int count =0;
 
 public class FiboRenge {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter  first number to get Fibonacci number--> ");
+
         int start = sc.nextInt();
 
         System.out.println("Enter last number to get Fibonacci number--> ");
         int end = sc.nextInt();
-        FibRenge(start, end);
+        int a =0;
+        int b=1;
+        int count = 1;
+        FibRenge(a,b,count,start, end);
+
     }
 
-    static void FibRenge(int st, int ed) {
-
-        System.out.println(st);
-        if (st <= ed) {
+    
+    static void FibRenge(int a ,int b,int count,int st, int ed) {
+        
+        if (count > ed) {
             return;
         }
-        FibRenge(st, st + 1);
+
+        if (count >= st && count <= ed) {
+            System.out.print(a+" ");
+        }
+
+        FibRenge(b,a+b,count+1,st,ed);
     }
+
 }

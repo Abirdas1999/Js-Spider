@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class ArmstrongAlter {
+public class ArmstrongAlterRege {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -25,7 +25,7 @@ public class ArmstrongAlter {
 
         if (ArmstrongRenges.isArmstrong(st, sum, len, temp)) {
             count++;
-            if (count % 2 != 0) {
+            if (count % 2 == 0) {
 
                 System.out.print(st + " ");
             }
@@ -33,4 +33,5 @@ public class ArmstrongAlter {
         }
         ArmstrongRenge(st + 1, ed, count);
     }
+
 }
