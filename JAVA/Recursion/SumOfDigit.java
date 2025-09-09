@@ -6,8 +6,8 @@ public class SumOfDigit {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number to sum the digits--> ");
-        int sum = sc.nextInt();
-        System.out.println(Sum(sum));
+        int n = sc.nextInt();
+        System.out.println(Sum(n));
     }
 
     static int Sum(int n) {

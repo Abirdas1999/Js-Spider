@@ -12,10 +12,8 @@ public class FiboRenge {
 
         System.out.println("Enter last number to get Fibonacci number--> ");
         int end = sc.nextInt();
-        int a =0;
-        int b=1;
         int count = 1;
-        FibRenge(a,b,count,start, end);
+        FibRenge(0,1,count,start, end);
 
     }
 
