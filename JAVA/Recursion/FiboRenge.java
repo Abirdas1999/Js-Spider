@@ -1,6 +1,5 @@
 
 import java.util.Scanner;
-// static int count =0;
 
 public class FiboRenge {
 
