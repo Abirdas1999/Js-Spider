@@ -5,9 +5,14 @@ public class A {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a Number --> ");
         int num = sc.nextInt();
-
         num+=6;
 
+
+        
         System.out.println(num);
+        System.out.println(num+num);
+        System.out.println(num+num);
+
+
     }
 }
