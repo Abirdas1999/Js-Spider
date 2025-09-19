@@ -6,6 +6,8 @@ public class A {
         System.out.println("Enter a Number --> ");
         int num = sc.nextInt();
 
+        num+=6;
+
         System.out.println(num);
     }
 }
