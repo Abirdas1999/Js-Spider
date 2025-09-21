@@ -1,6 +1,6 @@
-package com.oops.methodoverriding;
+package com.javaAbir.oops.methodoverriding;
 
-public class Test {
+public class A {
     static void main(String[] args) {
 
         System.out.println("This is a Java project");
