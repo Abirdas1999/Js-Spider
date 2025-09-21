@@ -1,4 +1,4 @@
-package com.javaa.oops.methodoverriding;
+package com.oops.methodoverriding;
 
 public class Test {
     static void main(String[] args) {
