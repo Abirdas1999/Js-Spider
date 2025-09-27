@@ -30,8 +30,12 @@ public class BankDriver {
         SBI s = new SBI();
         ICICI i = new ICICI();
         AXIS a = new AXIS();
+//        Bank b = new Bank();
         System.out.println(s.getRateOfInt());
         System.out.println(i.getRateOfInt());
         System.out.println(a.getRateOfInt());
+//        System.out.println(b.getRateOfInt());
+
     }
 }
+
