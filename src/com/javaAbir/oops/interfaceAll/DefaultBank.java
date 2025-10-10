@@ -55,13 +55,14 @@ class Axis implements Bank{
 class BankDriver1{
     public static Bank getBank() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("1.SBI \n 2.ICICI \n 3.AXIS \n 4.None");
+        System.out.println("1.SBI \n2.ICICI \n3.AXIS \n4.None");
+        System.out.println("----->");
         int n = sc.nextInt();
         if (n == 1) return new SBI();
         else if (n==2) return new Icici();
         else if (n==3) return new Axis();
         else {
-            System.out.println("Invalid");
+            System.out.print("Invalid");
             return null;
         }
     }
@@ -70,8 +71,8 @@ public class DefaultBank {
     public static void main(String[] args) {
         Bank b = BankDriver1.getBank();
         b.rateOfInt();
-        b.creditCard();
-        Bank.IFSC(b);
+        b.creditCard();//if b = AXIS , then it access parent class method ...
+        Bank.IFSC(b);//because IFSC() is a static-method...
         if (b instanceof SBI)
             ((SBI)b).Yono();
         else if (b instanceof  Icici)
