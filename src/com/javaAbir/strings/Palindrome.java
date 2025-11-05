@@ -6,7 +6,7 @@ public class Palindrome {
         System.out.println("mam -> " + isPalindrome("mam"));
         System.out.println("malayalam -> " + isPalindrome("malayalam"));
         System.out.println("madam -> " + isPalindrome("madam"));
-
+        System.out.println("Null-->"+isPalindrome(""));//here is the problem it take null value;
     }
     public static boolean isPalindrome(String s){
         int i = 0;
