@@ -6,6 +6,7 @@ interface Recruitment{
     public default void noHiring(){
         System.out.println("No vacancy available");
     }
+
 }
 class Hr implements Recruitment{
     @Override
@@ -26,8 +27,11 @@ class Sales implements Recruitment{
     }
 }
 class Vacancy{
-    void isVacancy(Recruitment r){
+    void isVacancy(Recruitment r){//Recuritment r = new Hr()
         r.isHiring();
+    }
+    void noVacancy(Recruitment r){
+        r.noHiring();
     }
 
 }
@@ -36,12 +40,12 @@ public class EmployeeDept {
         Scanner sc = new Scanner(System.in);
         System.out.println("Are You want to hire? -->\n1.Yes \n2.No");
         int m = sc.nextInt();
+        Vacancy v = new Vacancy();
         if (m==1){
             //for hiring
             System.out.println("In which department want to Hiring? -->\n1.HR \n2.Development\n3.Sales");
             int n = sc.nextInt();
-
-            Vacancy v = new Vacancy();
+//           v.isVacancy(new Hr());
             if (n==1){
                 v.isVacancy(new Hr());
             } else if (n==2) {
@@ -52,8 +56,7 @@ public class EmployeeDept {
                 System.out.println("Wrong Input...");
             }
         } else if (m==2) {
-            //❌here i want to execute default method in interface...❌
-            System.out.println("OK");
+            v.noVacancy(new Hr());
         }else {
             System.out.println("Wrong Input...");
         }
