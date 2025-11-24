@@ -17,7 +17,7 @@ public class Company {
     }
     public static void main(String[] args) {
         Employee e =new Employee("Abir");
-        Company c = new Company("TCS",e);
+        Company c = new Company("TCS",e);//copy constructor
         c.display();
     }
 

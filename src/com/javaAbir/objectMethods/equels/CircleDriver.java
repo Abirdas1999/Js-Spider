@@ -27,6 +27,7 @@ public class CircleDriver {
         System.out.println(c.equals(c2));
         System.out.println(c.equals(c3));
         System.out.println(c.equals(c4));
+        System.out.println(c.toString());
 
     }
 
