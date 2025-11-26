@@ -18,9 +18,8 @@ public class Palindrrome {
             if (c[i]!=c[j]) return false;
             i++;
             j--;
-
         }
-            return true;
+        return true;
     }
 
 }
