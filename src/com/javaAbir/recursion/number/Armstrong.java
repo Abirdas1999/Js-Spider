@@ -13,7 +13,7 @@ public class Armstrong {
         int len = (n+"").length();
         System.out.println(isArmstrong(n,sum,temp,len));
 }
-
+                                                                  
      static boolean isArmstrong(int n, int sum,int temp,int len) {
         if (n<1) return sum==temp;
         sum+=(int)(Math.pow(n%10,len));
