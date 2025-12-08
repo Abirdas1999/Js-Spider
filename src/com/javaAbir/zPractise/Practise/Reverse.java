@@ -1,6 +1,5 @@
-package com.javaAbir.array;
+package com.javaAbir.zPractise.Practise;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Reverse {

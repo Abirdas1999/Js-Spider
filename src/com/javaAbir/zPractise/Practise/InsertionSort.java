@@ -1,4 +1,4 @@
-package com.javaAbir.array;
+package com.javaAbir.zPractise.Practise;
 
 import java.util.Arrays;
 

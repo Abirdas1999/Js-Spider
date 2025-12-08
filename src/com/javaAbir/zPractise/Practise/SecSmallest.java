@@ -1,4 +1,4 @@
-package com.javaAbir.array;
+package com.javaAbir.zPractise.Practise;
 
 public class SecSmallest {
     public static void main(String[] args) {

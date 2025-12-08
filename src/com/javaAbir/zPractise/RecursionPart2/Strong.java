@@ -20,7 +20,7 @@ public class Strong {
 
     static int getfact(int s,int prod){
         if (s==0) return prod;
-        prod*=s%10;
+        prod*=s;
         return getfact(s-1,prod);
     }
 

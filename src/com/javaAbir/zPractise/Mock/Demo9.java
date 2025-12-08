@@ -19,9 +19,7 @@ public class Demo9 {
                     temp--;
                 }
                 count+=i;
-
             }
-
             System.out.println();
         }
     }

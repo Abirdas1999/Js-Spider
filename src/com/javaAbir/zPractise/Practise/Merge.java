@@ -1,7 +1,6 @@
-package com.javaAbir.array;
+package com.javaAbir.zPractise.Practise;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Merge {
     public static void main(String[] args) {
