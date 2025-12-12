@@ -1,7 +1,6 @@
-package com.javaAbir.numberPG.Comparable;
+package com.javaAbir.array.Comparable;
 
 import java.util.Arrays;
-
 class Demo{
     public static void main(String[] args) {
         Circle [] c = {
@@ -16,17 +15,18 @@ class Demo{
         Sorting s  = new Sorting();
         s.sort(c);
 
+
         System.out.println(Arrays.toString(c));
     }
 }
-class Circle implements Comparable {
+class Circle implements Comparable <Circle> {
     int radius;
     public Circle(int r){
         radius = r;
     }
     @Override
-    public int compareTo(Object o){
-        return radius - ((Circle)o).radius;
+    public int compareTo(Circle c){
+        return radius - c.radius;
     }
 
     @Override
@@ -34,19 +34,18 @@ class Circle implements Comparable {
         return "Radius =["+radius+"]";
     }
 }
+
 class Sorting{
-    public void  sort (Circle [] a){
+     void  sort (Circle [] a){
         for (int i = 0; i < a.length-1 ; i++) {
             for (int j = 0; j < a.length-1-i ; j++) {
 //                Comparable c = (Comparable) a[j];
-                if (a[j].compareTo(a[j+1])>0){
+                if (a[j].compareTo(a[j+1])<0){
                     Circle temp = a[j];
                     a[j] = a[j+1];
                     a[j+1]=temp;
                 }
-
             }
-
         }
     }
 
