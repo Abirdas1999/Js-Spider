@@ -19,6 +19,24 @@ class Demo {
     }
 }
 
+class Sorting {
+
+    void sort(Circle[] a) {
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = 0; j < a.length - 1 - i; j++) {
+                //Comparable c = (Comparable) a[j];
+                if (a[j].compareTo(a[j + 1]) > 0) {
+                    Circle temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+}
+
+
 class Circle implements Comparable<Circle> {
     int radius;
 
@@ -35,20 +53,14 @@ class Circle implements Comparable<Circle> {
     public String toString() {
         return "Radius =[" + radius + "]";
     }
-}
 
-class Sorting {
-    void sort(Circle[] a) {
-        for (int i = 0; i < a.length - 1; i++) {
-            for (int j = 0; j < a.length - 1 - i; j++) {
-                //Comparable c = (Comparable) a[j];
-                if (a[j].compareTo(a[j + 1]) < 0) {
-                    Circle temp = a[j];
-                    a[j] = a[j + 1];
-                    a[j + 1] = temp;
-                }
-            }
-        }
+
+    //how work ...
+    public static void main(String[] args) {
+        Circle c = new Circle(23);
+        System.out.println(c.compareTo(new Circle(78)));
     }
 
+
 }
+
