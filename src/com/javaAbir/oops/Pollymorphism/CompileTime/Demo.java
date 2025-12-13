@@ -1,8 +1,6 @@
 package com.javaAbir.oops.Pollymorphism.CompileTime;
 class Student{
-    String name;
-    int id;
-    String course;
+
     void getStudent(String name){
         System.out.println("Student name is --> "+name);
     }
