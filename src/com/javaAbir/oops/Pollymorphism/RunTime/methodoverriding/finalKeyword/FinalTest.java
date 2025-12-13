@@ -1,4 +1,4 @@
-package com.javaAbir.oops.methodoverriding.finalKeyword;
+package com.javaAbir.oops.Pollymorphism.RunTime.methodoverriding.finalKeyword;
 public class FinalTest {
     final int i;
 //    final static int j; blank final variable

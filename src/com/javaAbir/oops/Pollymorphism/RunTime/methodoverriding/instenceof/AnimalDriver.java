@@ -1,4 +1,4 @@
-package com.javaAbir.oops.methodoverriding.instenceof;
+package com.javaAbir.oops.Pollymorphism.RunTime.methodoverriding.instenceof;
 class Animal{
     public void eat(){
         System.out.println("Animal eating....");

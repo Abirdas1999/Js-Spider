@@ -1,4 +1,4 @@
-package com.javaAbir.oops.methodoverriding.binding;
+package com.javaAbir.oops.Pollymorphism.RunTime.methodoverriding.binding;
 class A {
     static int i = 10;
     int j = 20;

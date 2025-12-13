@@ -1,4 +1,4 @@
-package com.javaAbir.oops.methodoverriding;
+package com.javaAbir.oops.Pollymorphism.RunTime.methodoverriding;
 class Bank{
     int getRateOfInt(){
         return 0;
