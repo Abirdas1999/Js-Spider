@@ -53,14 +53,10 @@ class Sorting {
                     e[j] = e[j + 1];
                     e[j + 1] = temp;
                 }
-
             }
-
         }
-
     }
 }
-
 
 class EmpCompare implements Comparator<Emp> {
     @Override
