@@ -35,6 +35,7 @@ class Demo {
         System.out.println("----------Remove------------");
         q.remove();
         System.out.println(q);
+        System.out.println(q.peek());
 
     }
 
@@ -117,7 +118,7 @@ class ArraylistQueue {
     public String toString() {
         if (size() == 0) return "[]";
         String s = "[ " + arr[0];
-        for (int i = 0; i < size(); i++) {
+        for (int i = 1; i < size(); i++) {
             s = s + ", " + arr[i];
         }
         s += " ]";

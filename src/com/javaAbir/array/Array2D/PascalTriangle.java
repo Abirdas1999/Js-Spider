@@ -1,6 +1,6 @@
 package com.javaAbir.array.Array2D;
 
-public class PascalTriangle {
+class PascalTriangle {
     public static void main(String[] args) {
        int [] [] a = getPascal(5);
       for (int i=0; i<a.length;i++){
