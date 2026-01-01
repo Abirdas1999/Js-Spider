@@ -20,7 +20,6 @@ class Pascal {
                 if (i==j||j==0) a[i][j] = 1;
                 else a[i][j] = a[i-1][j-1] + a[i-1][j];
             }
-
         }
 
         //printing the array

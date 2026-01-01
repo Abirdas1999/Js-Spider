@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 class Insertion {
     public static void main(String[] args) {
-        int [] a = {1,1,65,0,3,2,7,45};
+        int [] a = {8,1,6,0,3,2,7,4};
         Sort(a);
         System.out.println(Arrays.toString(a));
         for (int b : a){

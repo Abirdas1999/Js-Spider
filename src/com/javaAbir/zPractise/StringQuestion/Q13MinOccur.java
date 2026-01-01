@@ -8,16 +8,12 @@ public class Q13MinOccur {
         System.out.println("Enter a String--> ");
         String s = sc.next();
         String s2 ="";
-        int min = 0;
+        int min = s.length();
         char m = ' ';
         for (int i = 0; i <s.length() ; i++) {
             s2 = s.replace(s.charAt(i)+"","");
             int count = s.length()-s2.length();
-            if (min==0){
-                min=count;
-                m = s.charAt(i);
-
-            } else if (count<min) {
+             if (count<min) {
                 min=count;
                 m = s.charAt(i);
             }

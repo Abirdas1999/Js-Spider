@@ -2,7 +2,7 @@ package com.javaAbir.strings;
 
 public class ReverceSentence {
     public static void main(String[] args) {
-            String s = "This is JAVA";
+            String s = "This is JAVA ";
             int i =s.length()-1;
             int j=s.length()-1;
             String res = "";

@@ -1,7 +1,7 @@
 package com.javaAbir.array.sort;
 import java.util.*;
 
-public class QuickSort {
+class QuickSort {
     public static void main(String[] args) {
         int[] a={5,8,1,2,9,12,4};
         System.out.println(Arrays.toString(a));

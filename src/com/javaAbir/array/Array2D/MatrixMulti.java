@@ -13,6 +13,9 @@ class MatrixMulti {
                 {1,2,2}
         };
         int [] [] c = getMultiply(a,b);
+
+
+
         for (int [] temp :c ){
             for (int d:temp){
                 System.out.print(d+"\t");

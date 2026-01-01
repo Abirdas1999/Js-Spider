@@ -62,6 +62,10 @@ class MyArrayList {
         for (int i = size() - 1; i >= index; i--) {
             arr[i + 1] = arr[i];
         }
+//        for (int i = index+1 ; i <size() ; i++) {
+//            arr[i-1] =
+//
+//        }
         arr[index] = e;
         p++;
     }

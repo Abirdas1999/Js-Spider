@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 class Selcetion {
     public static void main(String[] args) {
-        int [] a = {1,23,45,12,0,7};
+        int [] a = {8,1,4,12,0,7};
         Sort(a);
         System.out.println(Arrays.toString(a));
     }
