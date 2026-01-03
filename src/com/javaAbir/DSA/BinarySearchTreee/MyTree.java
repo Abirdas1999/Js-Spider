@@ -1,11 +1,22 @@
-package com.javaAbir.DSA.BinarySearchTree;
-
-
+package com.javaAbir.DSA.BinarySearchTreee;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class MyTree {
+public class MyTree {
     public static void main(String[] args) {
+        MyBinarySearchTree m = new MyBinarySearchTree();
+        m.add(20);
+        m.add(10);
+        m.add(40);
+        m.add(40);
+        m.add(60);
+        m.add(32);
+        m.add(90);
+//        m.remove(20);
+//        m.In_Order();
+//        m.Pre_Order();
+        m.level_Order();
+
 
     }
 
@@ -27,7 +38,7 @@ class Node {
     }
 }
 
-class BinarySearchTree {
+class MyBinarySearchTree {
     private Node root;
     private int count = 0;
     private boolean flag;
@@ -41,13 +52,13 @@ class BinarySearchTree {
     public boolean add(int key) {
         flag = true;
         Node n = new Node(key);
-        root = add(root, n.key);
+        root = add(root, key);
         return flag;
     }
 
 
-    //add(,)
-    public Node add(Node n, int key) {
+    //add() -- helper method
+    private Node add(Node n, int key) {
         if (n == null) {
             Node node = new Node(key);
             count++;
@@ -64,8 +75,8 @@ class BinarySearchTree {
     }
 
 
-    //min() & max()
-    public int min(Node n) {
+    //min()
+    private int min(Node n) {
         int min = n.key;
         while (n.left != null) {
             min = n.left.key;
@@ -74,8 +85,8 @@ class BinarySearchTree {
         return min;
     }
 
-    //min() & max()
-    public int max(Node n) {
+    //max()
+    private int max(Node n) {
         int max = n.key;
         while (n.right != null) {
             max = n.right.key;
@@ -84,9 +95,15 @@ class BinarySearchTree {
         return max;
     }
 
+    public boolean remove(int key) {
+        int oldSize = count;
+        root = remove(root, key);
+        return count < oldSize;
 
-    //remove()
-    public Node remove(Node n, int key) {
+    }
+
+    //remove()--helper method
+    private Node remove(Node n, int key) {
         if (n == null) return null;
         if (key < n.key) n.left = remove(n.left, key);
         else if (key > n.key) n.right = remove(n.right, key);
@@ -109,7 +126,7 @@ class BinarySearchTree {
     //level_Order
     public void level_Order() {
         Queue<Node> q = new LinkedList<>();
-        q.add(root);
+        q.add(root);//adding element to queue
         while (!q.isEmpty()) {
             Node n = q.poll();
             System.out.print(n.key + "\t");
@@ -120,7 +137,7 @@ class BinarySearchTree {
 
 
     //Pre_Order
-    public void Pre_Order(Node n) {
+    private void Pre_Order(Node n) {
         if (n == null) return;
         System.out.print(n.key + "\t");
         Pre_Order(n.left);
@@ -133,7 +150,7 @@ class BinarySearchTree {
 
 
     //Post_Order
-    public void Post_Order(Node n) {
+    private void Post_Order(Node n) {
         if (n == null) return;
         Post_Order(n.left);
         Post_Order(n.right);
@@ -146,7 +163,7 @@ class BinarySearchTree {
 
 
     //In_Order
-    public void In_Order(Node n) {
+    private void In_Order(Node n) {
         if (n == null) return;
         In_Order(n.left);
         System.out.print(n.key + "\t");
@@ -157,5 +174,5 @@ class BinarySearchTree {
         In_Order(root);
     }
 
-
 }
+
