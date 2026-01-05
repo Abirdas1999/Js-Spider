@@ -1,8 +1,9 @@
 package com.javaAbir.DSA.BinarySearchTreee;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class MyTree {
+class MyTree {
     public static void main(String[] args) {
         MyBinarySearchTree m = new MyBinarySearchTree();
         m.add(20);
@@ -15,7 +16,8 @@ public class MyTree {
 //        m.remove(20);
 //        m.In_Order();
 //        m.Pre_Order();
-        m.level_Order();
+//        m.level_Order();
+        System.out.println(m.contains(32));
 
 
     }
@@ -52,7 +54,7 @@ class MyBinarySearchTree {
     public boolean add(int key) {
         flag = true;
         Node n = new Node(key);
-        root = add(root, key);
+        root = add(root, n.key);
         return flag;
     }
 
@@ -118,8 +120,23 @@ class MyBinarySearchTree {
                 n.key = min(n.right);
                 n.right = remove(n.right, n.key);
             }
+//             else { //it also doing the same logic
+//                n.key = max(n.left);
+//                n.left = remove(n.left, n.key);
+//            }
         }
         return n;
+    }
+    //contains()
+    public boolean contains(int key) {
+        return contains(root, key);
+    }
+
+    private boolean contains(Node n, int key) {
+        if (n == null) return false;
+        if (key == n.key) return true;
+        else if (key < n.key) return contains(n.left, key);
+        else return contains(n.right, key);
     }
 
 

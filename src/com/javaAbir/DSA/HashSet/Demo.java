@@ -1,5 +1,7 @@
 package com.javaAbir.DSA.HashSet;
 
+import java.util.Arrays;
+
 public class Demo {
     public static void main(String[] args) {
         MyHashSet s = new MyHashSet();
@@ -35,7 +37,7 @@ class Node {
 
 class MyHashSet {
     private Node[] a = new Node[10];
-   private int count = 0;
+    private int count = 0;
 
     public int size() {
         return count;
@@ -94,10 +96,11 @@ class MyHashSet {
     }
 
     public void display() {
+
         for (int i = 0; i < a.length; i++) {
             Node curr = a[i];
             while (curr != null) {
-                System.out.println(curr.ele);
+                System.out.print(curr.ele + " ");
                 curr = curr.next;
             }
 

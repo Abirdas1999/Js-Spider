@@ -4,7 +4,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class WriteData {
+ class WriteData {
     public static void main(String[] args) throws IOException {
         String path = "/Users/abirdas/Documents/Code-Pool/BLR/src/com/javaAbir/FileHandling";
 

@@ -5,11 +5,13 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileTransfer {
+ class FileTransfer {
     public static void main(String[] args) throws IOException {
         String path = "/Users/abirdas/Documents/Code-Pool/BLR/src/com/javaAbir/FileHandling";
         getCopy(path);
     }
+
+
     static void getCopy(String path) throws IOException {
         File file = new File(path + "/Demo.java");
         FileInputStream f = new FileInputStream(file);

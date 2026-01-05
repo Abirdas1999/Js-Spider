@@ -3,7 +3,7 @@ package com.javaAbir.FileHandling;
 import java.io.File;
 import java.io.IOException;
 
-public class Demo {
+ class Demo {
     public static void main(String[] args) throws IOException {
         File f = new File("/Users/abirdas/Documents/Code-Pool/BLR/src/com/javaAbir/FileHandling/Dynamic");
         File f1 = new File("/Users/abirdas/Documents/Code-Pool/BLR/src/com/javaAbir/FileHandling/Dynamic/Demo.txt");
