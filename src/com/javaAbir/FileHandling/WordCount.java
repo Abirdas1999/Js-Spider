@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 
-class PhoneNumber {
+public class WordCount {
     public static void main(String[] args) throws IOException {
         String path = "/Users/abirdas/Documents/Code-Pool/BLR/src/com/javaAbir/FileHandling";
 
@@ -17,10 +17,10 @@ class PhoneNumber {
 
     static int getModified(String path) throws IOException {
         int count = 0;
-//        int wd = 0;
+        int wd = 0;
         String s = "";
 
-        File file = new File(path + "/PhoneNumber/Phone.txt");
+        File file = new File(path + "/WordCount/Word.txt");
         if (!file.exists()) createFile(path);
 
         File file1 = new File(path + "/Dynamic/Demo.txt");
@@ -59,8 +59,8 @@ class PhoneNumber {
     }
 
     static void createFile(String path) throws IOException {
-        File f = new File(path+"/PhoneNumber");
-        File f1 = new File(path+"/PhoneNumber/Phone.txt");
+        File f = new File(path+"/WordCount");
+        File f1 = new File(path+"/WordCount/Word.txt");
         System.out.println(f.getAbsoluteFile());//getting absolute path...
 //        System.out.println(f.delete());//delete the folder
         if (f.exists()) {
