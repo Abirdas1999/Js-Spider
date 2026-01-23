@@ -1,7 +1,9 @@
 package com.Java_Core.DSA.BinarySearchTreee;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.stream.Collectors;
 
 class MyTree {
     public static void main(String[] args) {
@@ -12,12 +14,18 @@ class MyTree {
         m.add(40);
         m.add(60);
         m.add(32);
-        m.add(90);
+	    m.add(90);
+//	    m.add(90);
+	    System.out.println (m.add(90));
+	    System.out.println (m.add(91));
+		m.printTree ();
+
+
 //        m.remove(20);
 //        m.In_Order();
 //        m.Pre_Order();
 //        m.level_Order();
-        System.out.println(m.contains(32));
+//        System.out.println(m.contains(32));
 
 
     }
@@ -50,7 +58,7 @@ class MyBinarySearchTree {
     }
 
 
-    //add()
+    //add()--->it must replace by insert...
     public boolean add(int key) {
         flag = true;
         Node n = new Node(key);
@@ -190,6 +198,34 @@ class MyBinarySearchTree {
     public void In_Order() {
         In_Order(root);
     }
+
+
+	//printing via path
+	private void printToRoot(Node root, ArrayList<Integer> list){
+		if (root == null) return;
+
+		//adding to list
+		list.add (root.key);
+
+		//printing...
+		if (root.left == null && root.right == null)printPath(list);
+		else {
+			printToRoot (root.right,list);
+			printToRoot (root.left,list);
+
+		}
+
+		//backtracking or deleting the leaf node
+		list.remove (list.size ()-1);
+	}
+
+	private void printPath (ArrayList<Integer> list) {
+		System.out.println (list.stream ().map (String::valueOf).collect (Collectors.joining ("-->")));
+	}
+
+	public void printTree(){
+		printToRoot (root,new ArrayList<> ());
+	}
 
 }
 
