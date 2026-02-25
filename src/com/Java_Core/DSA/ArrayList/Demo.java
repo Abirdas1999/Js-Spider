@@ -1,14 +1,16 @@
 package com.Java_Core.DSA.ArrayList;
 
+import java.util.ArrayList;
+
 class Demo {
     public static void main(String[] args) {
+//	    ArrayList<Integer> a = new ArrayList<> ();
+
         MyArrayList m = new MyArrayList();
 //        System.out.println(m);
         m.add(10);
         m.add(30);
         m.add(20);
-        m.add(50);
-        m.add(60);
         System.out.println(m);
         System.out.println(m.get(3));
         m.add(3, 60);

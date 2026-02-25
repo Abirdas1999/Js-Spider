@@ -6,8 +6,8 @@ import java.util.Queue;
 import java.util.stream.Collectors;
 
 class MyBinaryTree {
-	public static void main(String[] args) {
-	    TreeClass t = new TreeClass ();
+	public static void main (String[] args) {
+		TreeClass t = new TreeClass ();
 		t.insert (56);
 		t.insert (86);
 		t.insert (56);
@@ -33,17 +33,18 @@ class MyBinaryTree {
 }
 
 //creating a node class
-class Node{
+class Node {
 	Node left;
 	int ele;
 	Node right;
 
-	public Node(Node left,int ele,Node right){
+	public Node (Node left, int ele, Node right) {
 		this.left = left;
 		this.ele = ele;
 		this.right = right;
 	}
-	public Node(int ele){
+
+	public Node (int ele) {
 		this.ele = ele;
 	}
 
@@ -51,27 +52,27 @@ class Node{
 }
 
 //creating a TreeClass
-class TreeClass{
+class TreeClass {
 	private int count = 0;
 	private boolean flag;
 	private Node root;
 
 
 	//creating the size()
-	public int size(){
+	public int size () {
 		return count;
 	}
 
 	//insert()
-	public boolean insert(int ele){
+	public boolean insert (int ele) {
 		flag = true;
 		Node n = new Node (ele);
-		root = insert (root,n.ele);
+		root = insert (root, n.ele);
 		return flag;
 	}
 
 	//insert helper method
-	private Node insert(Node n,int ele) {
+	private Node insert (Node n, int ele) {
 		if (n == null) {
 			count++;
 			Node node = new Node (ele);
@@ -81,112 +82,116 @@ class TreeClass{
 
 		if (ele > n.ele) {
 			n.right = insert (n.right, ele);
-		} else if (ele<n.ele) {
+		} else if (ele < n.ele) {
 			n.left = insert (n.left, ele);
-		}else{
+		} else {
 			flag = false;
 		}
 		return n;
 	}
 
 	//contain()
-	public boolean contain(int ele){
-		return contain (root,ele);
-	}
-	//contain helper method
-	private boolean contain(Node n, int ele){
-		if (n == null) return false;
-		if (ele == n.ele) return true;
-		else if (ele>n.ele) return contain (n.right,ele);
-		else return contain (n.left,ele);
+	public boolean contain (int ele) {
+		return contain (root, ele);
 	}
 
+	//contain helper method
+	private boolean contain (Node n, int ele) {
+		if (n == null) return false;
+		if (ele == n.ele) return true;
+		else if (ele > n.ele) return contain (n.right, ele);
+		else return contain (n.left, ele);
+	}
 
 
 	//in-Order
-	public void in_Order(){
+	public void in_Order () {
 		in_Order (root);
 	}
-	private void in_Order(Node n){
+
+	private void in_Order (Node n) {
 		if (n == null) return;
 		in_Order (n.left);
-		System.out.print (n.ele+"\t");
+		System.out.print (n.ele + "\t");
 		in_Order (n.right);
 	}
 
 	//pre-Order
-	public void pre_Order(){
+	public void pre_Order () {
 		pre_Order (root);
 	}
-	private void pre_Order(Node n){
+
+	private void pre_Order (Node n) {
 		if (n == null) return;
-		System.out.print (n.ele+"\t");
+		System.out.print (n.ele + "\t");
 		pre_Order (n.left);
 		pre_Order (n.right);
 	}
 
 	//post-Order
-	public void post_Order(){
+	public void post_Order () {
 		post_Order (root);
 	}
-	private void post_Order(Node n){
+
+	private void post_Order (Node n) {
 		if (n == null) return;
 		post_Order (n.left);
 		post_Order (n.right);
-		System.out.print (n.ele+"\t");
+		System.out.print (n.ele + "\t");
 	}
 
 	//level-Order
-	public void level_Order(){
-		Queue<Node> q = new LinkedList<>();
+	public void level_Order () {
+		Queue<Node> q = new LinkedList<> ();
 		q.add (root);
 
-		while (!q.isEmpty ()){
+		while (!q.isEmpty ()) {
 			Node n = q.poll ();
-			System.out.println (n.ele+"\t");
-			if (n.left!=null)q.add (n.left);
-			if (n.right!=null)q.add (n.right);
+			System.out.println (n.ele + "\t");
+			if (n.left != null) q.add (n.left);
+			if (n.right != null) q.add (n.right);
 		}
 	}
 
 	//Print-Root-Leaf
-	public void printFromRoot(){
-		printFromRoot(root,new ArrayList<>());
+	public void printFromRoot () {
+		printFromRoot (root, new ArrayList<> ());
 	}
-	private void printFromRoot(Node n,ArrayList<Integer> list){
-		if (n == null) return;
 
-		list.add (n.ele);
-		if (n.right == null && n.left == null)printPath(list);
-		else {
-			printFromRoot(n.left,list);
-			printFromRoot(n.right,list);
-		}
-
-		//for backtracking⭐️⭐️⭐️⭐️
-		list.remove (list.size ()-1);
-
-
-	}
 	private void printPath (ArrayList<Integer> list) {
 		System.out.println (list.stream ().map (String::valueOf).collect (Collectors.joining ("-->")));
 	}
 
+	private void printFromRoot (Node n, ArrayList<Integer> list) {
+		if (n == null) return;
+
+		list.add (n.ele);
+		if (n.right == null && n.left == null) printPath (list);
+		else {
+			printFromRoot (n.left, list);
+			printFromRoot (n.right, list);
+		}
+
+		//for backtracking⭐️⭐️⭐️⭐️
+		list.removeLast ();
+
+
+	}
 
 
 	//min() & max()
-	private int getMax(Node n){
+	private int getMax (Node n) {
 		int max = n.ele;
-		while (n.right!=null){
+		while (n.right != null) {
 			max = n.right.ele;
 			n = n.right;
 		}
 		return max;
 	}
 
-	private int getMin(Node n){
+	private int getMin (Node n) {
 		int min = n.ele;
-		while (n.left!=null){
+		while (n.left != null) {
 			min = n.left.ele;
 			n = n.left;
 		}
@@ -194,25 +199,29 @@ class TreeClass{
 	}
 
 	//remove()
-	public boolean remove(int ele){
+	public boolean remove (int ele) {
 		int newSize = count;
-		root = remove (root,ele);
-		return newSize<count;
+		root = remove (root, ele);
+		return newSize < count;
 	}
-	private Node remove(Node n,int ele){
+
+	private Node remove (Node n, int ele) {
 		if (n == null) return null;
-		if (n.ele>ele) n.left = remove (n.left,ele);
-		else if (n.ele<ele) n.right = remove (n.right,ele);
+		if (n.ele > ele) n.left = remove (n.left, ele);
+		else if (n.ele < ele) n.right = remove (n.right, ele);
 		else {
-			if (n.right == null){
+			if (n.right == null) {
 				count--;
 				return n.left;
-			}else if (n.left == null){
+			} else if (n.left == null) {
 				count--;
 				return n.right;
-			}else {
-				n.ele = getMin(n.right);
-				n.right = remove (n.right,n.ele);
+			} else {
+				n.ele = getMin (n.right);
+				n.right = remove (n.right, n.ele);
+
+//				n.ele = getMax (n.left);
+//				n.left = remove (n.left,n.ele);
 			}
 		}
 		return n;

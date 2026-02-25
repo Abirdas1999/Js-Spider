@@ -1,6 +1,5 @@
 package com.Java_Core.strings.Questions;
 
-import java.util.List;
 import java.util.Stack;
 
 class BalancedStringCollection {
