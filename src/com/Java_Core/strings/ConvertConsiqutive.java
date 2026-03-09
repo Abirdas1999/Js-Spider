@@ -4,7 +4,7 @@ package com.Java_Core.strings;
 
 public class ConvertConsiqutive {
     public static void main(String[] args) {
-        String s = "Boss";
+        String s = "Bosss";
         char[]ch = s.toCharArray();
         String res = "";
 

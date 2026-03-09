@@ -2,7 +2,7 @@ package com.Java_Core.strings.Questions;
 
 class BiggestSubString {
 	public static void main(String[] args) {
-		String s = "asmalayalamdsa";
+		String s = "asmalayalamdsa";//palindromic substring
 		String biggest = "";
 		System.out.println (getBiggestSub(s,biggest));
 	}

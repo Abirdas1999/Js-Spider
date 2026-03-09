@@ -2,7 +2,7 @@ package com.Java_Core.strings;
 
 public class Encoding {
     public static void main(String[] args) {
-        System.out.println(getEncode("atif",2));
+        System.out.println(getEncode("azc",2));
 
     }
     static String getEncode(String s , int level){

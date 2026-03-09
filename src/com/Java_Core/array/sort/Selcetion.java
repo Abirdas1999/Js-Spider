@@ -9,7 +9,7 @@ class Selcetion {
         System.out.println(Arrays.toString(a));
     }
     static void Sort(int [] a){
-        for (int i = 0; i <a.length-1 ; i++) {
+        for (int i = 0; i <a.length ; i++) {
             int index = i;
             for (int j = i+1; j <a.length ; j++) {
                 if (a[j]<a[index]){

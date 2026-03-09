@@ -17,7 +17,6 @@ class Demo {
         MyLinkedlList m = new MyLinkedlList();
         m.add(50);
     }
-
 }
 
 class Demo2 {
@@ -33,7 +32,6 @@ class Demo2 {
         System.out.println("Array = "+l);
 
     }
-
 }
 
 class Node {
@@ -84,7 +82,7 @@ class MyLinkedlList {
 
     //add(index,Object e)
     public void add(int index, Object e) {
-        if (index <= -1 || index >=size()) {
+        if (index <= -1 || index >size()) {
             throw new IndexOutOfBoundsException();
         }
         if (index == 0) {

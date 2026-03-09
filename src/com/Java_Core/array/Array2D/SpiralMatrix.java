@@ -30,14 +30,11 @@ class SpiralMatrix {
                     a[r][--c] = i;
                     if (c == size - 1 - r) dir = 'u';
                     break;
-
                 case 'u':
                     a[--r][c] = i;
                     if (r == c + 1) dir = 'r';
                     break;
             }
-
-
         }
         return a;
 

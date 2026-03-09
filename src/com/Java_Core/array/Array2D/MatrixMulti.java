@@ -32,9 +32,7 @@ class MatrixMulti {
                 for (int k = 0; k <size ; k++) {
                     c[i][j] += a[i][k] * b[k][j];
                 }
-
             }
-
         }
         return c;
 
