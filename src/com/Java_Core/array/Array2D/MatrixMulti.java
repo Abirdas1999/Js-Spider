@@ -28,8 +28,11 @@ class MatrixMulti {
         int size = a.length;
         int [] [] c = new int [size] [size];
         for (int i = 0; i <size ; i++) {
+			//outer array
             for (int j = 0; j <size ; j++) {
+				//inner array
                 for (int k = 0; k <size ; k++) {
+					//inner element
                     c[i][j] += a[i][k] * b[k][j];
                 }
             }

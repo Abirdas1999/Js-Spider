@@ -1,8 +1,11 @@
 package com.Java_Core.DSA.HashSet;
 
+import java.util.HashSet;
+
 public class Demo {
     public static void main(String[] args) {
         MyHashSet s = new MyHashSet();
+//	    HashSet<Integer> h = new HashSet<> ();
         s.add(30);
         s.add(20);
         s.add(23);
@@ -50,6 +53,7 @@ class MyHashSet {
 			count++;
 			return true;
 		}
+
 		//for the already occupied
 		Node curr = a[index];
 		while (true) {
@@ -78,7 +82,6 @@ class MyHashSet {
 
 		while (curr != null) {
 			if (curr.ele.equals (ele)) {
-
 				//for 1st one
 				if (prev == null) {
 					a[index] = curr.next;

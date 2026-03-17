@@ -45,7 +45,7 @@ public class Mergesort {
         while(i<a.length){
             c[k++]=a[i++];
         }
-        while(j<a.length){
+        while(j<b.length){
             c[k++]=b[j++];
         }
     }

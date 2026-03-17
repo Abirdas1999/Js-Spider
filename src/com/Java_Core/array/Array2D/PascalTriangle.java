@@ -5,11 +5,10 @@ class PascalTriangle {
        int [] [] a = getPascal(5);
       for (int i=0; i<a.length;i++){
           for (int j = 0; j <=a.length-i-1 ; j++) {
-              System.out.print(" ");
-
+              System.out.print("  ");
           }
           for (int c : a[i]) {
-              System.out.print(c+" ");
+              System.out.print("  "+c);
           }
           System.out.println();
       }

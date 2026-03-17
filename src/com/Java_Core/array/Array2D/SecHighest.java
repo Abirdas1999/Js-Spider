@@ -24,8 +24,7 @@ class SecHighest {
                 if (a[i][j]>high) {
                     secHigh =high;
                     high = a[i][j];
-                }
-				else if (a[i][j]>secHigh && secHigh<high) {
+                } else if (a[i][j]>secHigh && secHigh<high) {
                     secHigh = a[i][j];
                 }
 

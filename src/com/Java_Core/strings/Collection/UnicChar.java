@@ -1,4 +1,4 @@
-package com.Java_Core.Collection.Programs;
+package com.Java_Core.strings.Collection;
 
 class UnicChar {
     public static void main(String[] args) {

@@ -21,10 +21,8 @@ public class Demo2 {
 //        Sorting.sort(e, new EmpName());//✅creating own sort method of arrays class
 //        Sorting.sort(e, new EmpNameValue());//✅creating own sort method of arrays class
         Sorting.sort(e, new EmpNameValueTotal());//✅creating own sort method of arrays class
-
-
-
         System.out.println(Arrays.toString(e));
+
 
     }
 }
@@ -66,7 +64,6 @@ class EmpCompare implements Comparator<Emp> {
         return 0;
     }
 }
-
 class EmpName implements Comparator<Emp> {
     @Override
     public int compare(Emp o1, Emp o2) {
@@ -75,7 +72,6 @@ class EmpName implements Comparator<Emp> {
         return 0;
     }
 }
-
 class EmpNameValue implements Comparator<Emp> {
     @Override
     public int compare(Emp o1, Emp o2) {
@@ -88,14 +84,14 @@ class EmpNameValue implements Comparator<Emp> {
 class EmpNameValueTotal implements Comparator<Emp> {
     @Override
     public int compare(Emp o1, Emp o2) {
-        if (getValue(o1) > getValue(o2)) return -1;
-        if (getValue(o1) < getValue(o2)) return 1;
+        if (getValue(o1) > getValue(o2)) return +1;
+        if (getValue(o1) < getValue(o2)) return -1;
         return 0;
     }
     static int getValue(Emp o1){
         char [] c = o1.name.toCharArray();
         int val = 0;
-        for (int i = 0; i <c.length-1 ; i++) {
+        for (int i = 0; i <c.length ; i++) {
             val+=c[i];
         }
         return val;

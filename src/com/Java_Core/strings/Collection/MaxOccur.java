@@ -1,9 +1,9 @@
-package com.Java_Core.NewPrac;
+package com.Java_Core.strings.Collection;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class Demo {
+public class MaxOccur {
 	public static void main (String[] args) {
 		String s = "asmalayalamdsa";//palindromic substring
 //		String biggest = "";

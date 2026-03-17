@@ -1,4 +1,4 @@
-package com.Java_Core.Collection.Programs;
+package com.Java_Core.strings.Collection;
 
 public class Test {
 //    public static void main(String[] args) {

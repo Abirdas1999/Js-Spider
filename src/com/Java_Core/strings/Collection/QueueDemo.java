@@ -1,4 +1,4 @@
-package com.Java_Core.Collection.Queuee;
+package com.Java_Core.strings.Collection;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

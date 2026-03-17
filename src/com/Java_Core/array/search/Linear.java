@@ -8,7 +8,6 @@ public class Linear {
     static int Search(int [] a, int target){
         for (int i = 0; i <=a.length-1 ; i++) {
             if (a[i]==target) return i;
-
         }
         return -1;
     }

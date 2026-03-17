@@ -1,4 +1,4 @@
-package com.Java_Core.Collection.Programs;
+package com.Java_Core.strings.Collection;
 
 import java.util.Stack;
 
@@ -7,9 +7,9 @@ public class BalancedString {
     public static void main(String[] args) {
 //        String s = "{[()]}";
 //        String s = "{}()[]";
-        String s = "{[(]})";
+//        String s = "{[(]})";
 //        String s = "{";
-//        String s = "";
+        String s = "";
         System.out.println(isBalanced(s));
     }
     static boolean isBalanced(String s){

@@ -1,13 +1,17 @@
-package com.Java_Core.DSA.Practise;
+package com.Java_Core.DSA.BinarySearchTreee;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 import java.util.stream.Collectors;
 
 class MyBinaryTree {
 	public static void main (String[] args) {
 		TreeClass t = new TreeClass ();
+//		TreeSet<Integer> s = new TreeSet<> ();
+
+
+//		t.insert ();
+
+
 		t.insert (56);
 		t.insert (86);
 		t.insert (56);
@@ -66,8 +70,7 @@ class TreeClass {
 	//insert()
 	public boolean insert (int ele) {
 		flag = true;
-		Node n = new Node (ele);
-		root = insert (root, n.ele);
+		root = insert (root, ele);
 		return flag;
 	}
 
@@ -202,7 +205,7 @@ class TreeClass {
 	public boolean remove (int ele) {
 		int newSize = count;
 		root = remove (root, ele);
-		return newSize < count;
+		return newSize > count;
 	}
 
 	private Node remove (Node n, int ele) {

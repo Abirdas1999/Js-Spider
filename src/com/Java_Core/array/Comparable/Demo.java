@@ -56,10 +56,10 @@ class Circle implements Comparable<Circle> {
 
 
     //how work ...
-    public static void main(String[] args) {
-        Circle c = new Circle(23);
-        System.out.println(c.compareTo(new Circle(78)));
-    }
+//    public static void main(String[] args) {
+//        Circle c = new Circle(23);
+//        System.out.println(c.compareTo(new Circle(78)));
+//    }
 
 
 }
