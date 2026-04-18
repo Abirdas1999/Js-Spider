@@ -30,7 +30,6 @@ class Driver implements Runnable {
 	void startWork(){
 		Thread t = new Thread(this);
 		t.start();
-
 		p.usePen(b);
 	}
 

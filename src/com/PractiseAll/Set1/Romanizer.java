@@ -37,4 +37,13 @@ class Romanizer {
 
 /*
 * 12 : twelve
+*
+* 40-xl
+* 50-l
+* 90-xc
+* 100=c
+* 400=cd
+* 500=d
+* 900=cm
+* 1000=m
 * */

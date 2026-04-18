@@ -7,7 +7,7 @@ class BinarySearch {
 		int[] a = {2, 5, 1, 8, 9, 3, 0};
 		Arrays.sort (a);
 		System.out.println (Arrays.toString (a));
-		System.out.println (BSearch (a, 0, a.length - 1, 3));
+		System.out.println (BSearch (a, 0, a.length - 1, 91));
 	}
 
 	static int BSearch (int[] a, int st, int ed, int key) {

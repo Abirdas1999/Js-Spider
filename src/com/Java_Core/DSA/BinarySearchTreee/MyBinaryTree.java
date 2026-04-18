@@ -9,7 +9,7 @@ class MyBinaryTree {
 //		TreeSet<Integer> s = new TreeSet<> ();
 
 
-//		t.insert ();
+//		t.insert ();`
 
 
 		t.insert (56);
@@ -28,7 +28,7 @@ class MyBinaryTree {
 //		System.out.println ();
 //		t.level_Order ();
 		t.printFromRoot ();
-		t.remove (56);
+		t.delete (56);
 		System.out.println ("----");
 		t.printFromRoot ();
 		System.out.println (t.contain (25));
@@ -202,16 +202,16 @@ class TreeClass {
 	}
 
 	//remove()
-	public boolean remove (int ele) {
+	public boolean delete (int ele) {
 		int newSize = count;
-		root = remove (root, ele);
+		root = delete (root, ele);
 		return newSize > count;
 	}
 
-	private Node remove (Node n, int ele) {
+	private Node delete (Node n, int ele) {
 		if (n == null) return null;
-		if (n.ele > ele) n.left = remove (n.left, ele);
-		else if (n.ele < ele) n.right = remove (n.right, ele);
+		if (n.ele > ele) n.left = delete (n.left, ele);
+		else if (n.ele < ele) n.right = delete (n.right, ele);
 		else {
 			if (n.right == null) {
 				count--;
@@ -221,18 +221,38 @@ class TreeClass {
 				return n.right;
 			} else {
 				n.ele = getMin (n.right);
-				n.right = remove (n.right, n.ele);
+				n.right = delete (n.right, n.ele);
 
 //				n.ele = getMax (n.left);
-//				n.left = remove (n.left,n.ele);
+//				n.left = delete (n.left,n.ele);
 			}
 		}
 		return n;
 	}
-//	private Node remove(Node n,int ele){
+
+
+	//search
+	public boolean search(int key){
+		return search (root,key);
+	}
+	private boolean search(Node n, int key){
+		if (n == null){
+			return false;
+		}
+		if (n.ele>key){
+			return search (n.left, key);
+		}else if (n.ele<key){
+			return search (n.right,key);
+		}else {
+			return true;
+		}
+	}
+
+
+//	private Node delete(Node n,int ele){
 //		if (n == null) return null;
-//		if (n.ele > ele) n.left = remove (n.left,ele);
-//		else if (n.ele<ele) n.right = remove (n.right,ele);
+//		if (n.ele > ele) n.left = delete (n.left,ele);
+//		else if (n.ele<ele) n.right = delete (n.right,ele);
 //		else {
 //			if (n.right==null){
 //				count--;
@@ -242,7 +262,7 @@ class TreeClass {
 //				return 	n.right;
 //			}else {
 //				n.ele = getMin(n.right);
-//				n.right = remove(n.right, n.ele);
+//				n.right = delete(n.right, n.ele);
 //			}
 //		}
 //		return n;

@@ -5,7 +5,7 @@ import java.util.Map;
 
 class NumberToWord {
 	public static void main(String[] args) {
-	    getWord(32453);
+	    getWord(10100);
 	}
 	static void getWord(int n){
 		Map<Integer,String> m = new LinkedHashMap<> ();
@@ -43,6 +43,7 @@ class NumberToWord {
 
 		for(int x : m.keySet()){
 			if(n >= x){
+				//10100---> /1000 = 10
 				int q = n / x;
 				if(x >= 100){
 					getWord(q);

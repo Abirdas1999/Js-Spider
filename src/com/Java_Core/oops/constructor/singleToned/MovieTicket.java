@@ -1,5 +1,8 @@
 package com.Java_Core.oops.constructor.singleToned;
 import java.util.Scanner;
+
+
+
 class MovieHall{
     private int seat;
     private static MovieHall m;
