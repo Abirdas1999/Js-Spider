@@ -42,16 +42,22 @@ class MyHashSet {
 		return count == 0;
 	}
 
+
+
 	//add()
 	public boolean add (Object ele) {
 		if (ele == null) ele += "";
 		int index = Math.abs (ele.hashCode () % a.length);
+
+
+
 
 		//for the empty
 		if (a[index] == null) {
 			a[index] = new Node (ele);
 			count++;
 			return true;
+
 		}
 
 		//for the already occupied
@@ -59,6 +65,8 @@ class MyHashSet {
 		while (true) {
 			//duplicate
 			if (ele.equals (curr.ele)) return false;
+
+
 			if (curr.next == null) {
 				curr.next = new Node (ele);
 				count++;
@@ -77,6 +85,8 @@ class MyHashSet {
 		if (a[index] == null) {
 			return false;
 		}
+
+
 		Node curr = a[index];
 		Node prev = null;
 

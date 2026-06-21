@@ -13,15 +13,15 @@ class Demo {
                 new Circle(30),
         };
 //        Arrays.sort(c);
-        Sorting s = new Sorting();//✅creating own sort method of arrays class
-        s.sort(c);
+	    Sorting.sort(c);
+
         System.out.println(Arrays.toString(c));
     }
 }
 
 class Sorting {
 
-    void sort(Circle[] a) {
+    static void sort(Circle[] a) {
         for (int i = 0; i < a.length - 1; i++) {
             for (int j = 0; j < a.length - 1 - i; j++) {
                 //Comparable c = (Comparable) a[j];
@@ -35,7 +35,6 @@ class Sorting {
     }
 
 }
-
 
 class Circle implements Comparable<Circle> {
     int radius;
